@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Title</title>
+    <style>
+        .section-title {
+            border-left: solid 5px red;
+            margin-bottom: 38px
+        }
+
+        .card-body {
+            -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+            min-height: 260px !important;
+            padding: 1.25rem;
+        }
+
+        .ca:hover {
+            transform: scale(1.1)
+        }
+
+        .shadow,
+        .subscription-wrapper {
+            box-shadow: 0px 15px 39px 0px rgba(8, 18, 109, 0.1) !important
+        }
+
+        .icon-primary {
+            color: #062caf
+        }
+
+        .icon-bg-circle {
+            position: relative
+        }
+
+        .icon-lg {
+            font-size: 50px
+        }
+
+        .icon-bg-circle::before {
+            z-index: 1;
+            position: relative
+        }
+
+        .icon-bg-primary::after {
+            background: #062caf !important
+        }
+
+        .icon-bg-circle::after {
+            content: '';
+            position: absolute;
+            width: 68px;
+            height: 68px;
+            top: -35px;
+            left: 15px;
+            border-radius: 50%;
+            background: inherit;
+            opacity: .1
+        }
+
+        p,
+        .paragraph {
+            font-weight: 400;
+            color: #8b8e93;
+            font-size: 16px;
+            line-height: 1.6;
+            font-family: "Poppins", sans-serif
+        }
+
+        .icon-bg-yellow::after {
+            background: #f6a622 !important
+        }
+
+        .icon-bg-purple::after {
+            background: #7952f5
+        }
+
+        .icon-yellow {
+            color: #f6a622
+        }
+
+        .icon-purple {
+            color: #7952f5
+        }
+
+        .icon-cyan {
+            color: #02d0a1
+        }
+
+        .icon-bg-cyan::after {
+            background: #02d0a1
+        }
+
+        .icon-bg-red::after {
+            background: #ff4949
+        }
+
+        .icon-red {
+            color: #ff4949
+        }
+
+        .icon-bg-green::after {
+            background: #66cc33
+        }
+
+        .icon-green {
+            color: #66cc33
+        }
+
+        .icon-bg-orange::after {
+            background: #ff7c17
+        }
+
+        .icon-orange {
+            color: #ff7c17
+        }
+
+        .icon-bg-blue::after {
+            background: #3682ff
+        }
+
+        .icon-blue {
+            color: #3682ff
+        }
+
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+        * {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+
+
+
+
+        /* .col-lg-7 .card1 {
+    overflow: hidden;
+    border-radius: 0%;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: white
+} */
+        .col-lg-7 .card1 {
+            /* overflow: hidden; */
+            /* border-radius: 0%; */
+            /* border: 1px solid #ddd; */
+            padding: 10px;
+            margin-top: 26px;
+            /* background-color: white; */
+        }
+
+        .col-lg-5 .card2 {
+            border: 1px solid #ddd;
+            background-color: #e8e3fc;
+            padding: 10px
+        }
+
+        p {
+            margin: 0
+        }
+
+        .fw-bold {
+            font-size: 20px
+        }
+
+        .text-muted {
+            font-size: 12px
+        }
+
+        .fas.fa-tasks {
+            color: blueviolet
+        }
+
+        .far.fa-file-alt {
+            color: #4949db
+        }
+
+        .fas.fa-trophy {
+            color: #fafa00
+        }
+
+        .fas.fa-cogs {
+            color: palevioletred
+        }
+
+        .fab.fa-app-store {
+            color: green
+        }
+
+        .fas.fa-download {
+            color: #5050f0
+        }
+
+        .fas.fa-angle-double-right {
+            color: #a56de6;
+            font-size: 12px
+        }
+
+        .cn {
+            background-color: white;
+            padding: 8px;
+            margin-bottom: 8.5px
+        }
+
+        .card .fs {
+            font-size: 12px
+        }
+
+        .card .circle {
+            height: 10px;
+            width: 10px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block
+        }
+
+        .card:hover {
+            background-color: #f2f2f2
+        }
+
+
+        .btn.btn-primary:hover .fas.fa-angle-double-right {
+            transform: translateX(10px);
+            transition: transform 0.5s ease
+        }
+
+
+
+        .btn.btn-secondary:hover .fas.fa-angle-double-right {
+            transform: translateX(10px);
+            transition: transform 0.5s ease
+        }
+
+        .fw-600 {
+            font-weight: 600
+        }
+    </style>
+    <style>
+        .box {
+            background: linear-gradient(to top right, #4a626e 0.3%, #1e2130 90.2%);
+            font-family: 'Raleway', sans-serif;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease 0s;
+        }
+
+        .box:hover {
+            filter: drop-shadow(5px 5px 10px #808080);
+        }
+
+        .box:before {
+            content: "";
+            width: 50px;
+            height: 50px;
+            border-top: 2px solid #fff;
+            border-right: 2px solid #fff;
+            transform-origin: top right;
+            transform: scale(0);
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            transition: all 0.4s ease;
+        }
+
+        .box:hover:before {
+            transform: scale(1);
+        }
+
+        .box img {
+            width: 100%;
+            height: auto;
+            transition: all 0.4s ease;
+        }
+
+        .box:hover img {
+            opacity: 0.2;
+        }
+
+        .box .box-content {
+            color: #fff;
+            opacity: 0;
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            transition: all 0.4s ease;
+        }
+
+        .box:hover .box-content {
+            opacity: 1;
+            transition-delay: 0.25s;
+        }
+
+        .box .title {
+            font-size: 22px;
+            font-weight: 600;
+            text-transform: capitalize;
+            text-shadow: 2px 2px 3px rgba(0, 0, 0, .6);
+            margin: 0 0 3px;
+        }
+
+        .box .post {
+            font-size: 13px;
+            font-weight: 600;
+            font-style: italic;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 3px rgba(0, 0, 0, .6);
+            display: block;
+        }
+
+        .box .icon {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            transform: translateX(-50%) translateY(-50%) scale(0) rotate(0);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transition: all 0.4s ease;
+        }
+
+        .box:hover .icon {
+            transform: translateX(-50%) translateY(-50%) scale(1) rotate(360deg);
+        }
+
+        .box .icon li {
+            margin: 0 4px;
+            display: inline-block;
+        }
+
+        .box .icon li a {
+            color: #fff;
+            font-size: 16px;
+            text-align: center;
+            line-height: 33px;
+            height: 35px;
+            width: 35px;
+            border: 1px solid #fff;
+            box-shadow: 1px 1px 2px rgba(0, 0, 0, .6);
+            display: block;
+            transition: all 0.3s;
+        }
+
+        .box .icon li a:hover {
+            border-radius: 0 10px;
+            background: #f24688;
+        }
+
+        @media only screen and (max-width:990px) {
+            .box {
+                margin: 0 0 30px;
+            }
+        }
+    </style>
+    <style>
+        .card-main {
+            padding: 50px;
+            border-radius: 10px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            box-shadow: 0px 4px 8px 0px #283593
+        }
+
+        .card-0 {
+            color: #fff;
+            background-color: #536DFE;
+            position: relative;
+            margin-left: 70px;
+            border-radius: 10px;
+            min-height: 312px
+        }
+
+        .carousel-indicators li {
+            cursor: pointer;
+            border-radius: 50% !important;
+            width: 10px;
+            height: 10px
+        }
+
+        .profile {
+            color: #000;
+            background-color: #FFD54F;
+            position: absolute;
+            left: -70px;
+            top: 17%;
+            border-radius: 8px;
+            border-top-left-radius: 0px;
+            border-bottom-right-radius: 0px
+        }
+
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-bottom-left-radius: 10px;
+            border-top-right-radius: 10px
+        }
+
+        .open-quotes {
+            margin-left: 130px;
+            margin-top: 100px
+        }
+
+        .content {
+            margin-left: 150px;
+            margin-right: 80px
+        }
+
+        .close-quotes {
+            margin-bottom: 100px;
+            margin-right: 60px
+        }
+
+        @media screen and (max-width: 600px) {
+            .card-main {
+                padding: 50px 10px
+            }
+
+            .card-0 {
+                min-height: 432px
+            }
+
+            .profile {
+                top: 24%
+            }
+
+            .profile-pic {
+                width: 90px;
+                height: 90px
+            }
+
+            .open-quotes {
+                margin-left: 100px
+            }
+
+            .content {
+                margin-left: 120px;
+                margin-right: 50px
+            }
+
+            .close-quotes {
+                margin-right: 30px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-left">
+                <p class="subtitle"></p>
+                <h2 class="section-title 
+                "> &nbsp; A personalised approach to guidance </h2>
+            </div>
+            <div class="col-lg-3 col-sm-6 mb-4">
+                <div class="card ca border-0 shadow rounded-xs pt-5">
+                    <div class="card-body"> <i
+                            class="fa fa-object-ungroup icon-lg icon-primary icon-bg-primary icon-bg-circle mb-3"></i>
+                        <h4 class="mt-4 mb-3"></h4>
+                        <p>Exploration journey of programs and opportunities
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 mb-4">
+                <div class="card border-0 shadow rounded-xs pt-5">
+                    <div class="card-body"> <i
+                            class="fa fa-users icon-lg icon-yellow icon-bg-yellow icon-bg-circle mb-3"></i>
+                        <h4 class="mt-4 mb-3"></h4>
+                        <p>Get matched to programs and opportunities matching your interests and profile
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 mb-4">
+                <div class="card border-0 shadow rounded-xs pt-5">
+                    <div class="card-body"> <i
+                            class="fa fa-desktop icon-lg icon-purple icon-bg-purple icon-bg-circle mb-3"></i>
+                        <h4 class="mt-4 mb-3"></h4>
+                        <p>Application guidance by people who have been there, done that
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 mb-4">
+                <div class="card border-0 shadow rounded-xs pt-5">
+                    <div class="card-body"> <i
+                            class="fa fa-cloud icon-lg icon-cyan icon-bg-cyan icon-bg-circle mb-3"></i>
+                        <h4 class="mt-4 mb-3"></h4>
+                        <p>24*7 support </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <section>
+        <div class="contain container">
+            <div class="row">
+                <div class="col-lg-7 p-0 mb-lg-0 mb-3">
+                    <div class="card1 pb-0">
+                        <div class="row pt-3">
+                            <div class="col-lg-6 col-md-6 pb-5">
+                                <div class="d-flex"> <span class="fas fa-tasks px-3 py-1"></span>
+                                    <div class="d-flex flex-column">
+                                        <p class="fw-bold">Tasks</p>
+                                        <p class="text-muted">Customize the way you manage work</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 pb-5">
+                                <div class="d-flex"> <span class="far fa-file-alt px-3 py-1"></span>
+                                    <div class="d-flex flex-column">
+                                        <p class="fw-bold">Docs</p>
+                                        <p class="text-muted">Build docus, wiki's & knowledge bases.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 pb-5">
+                                <div class="d-flex"> <span class="fas fa-trophy px-3 py-1"></span>
+                                    <div class="d-flex flex-column">
+                                        <p class="fw-bold">Goals</p>
+                                        <p class="text-muted">Monitor and manage your strategy</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 pb-5">
+                                <div class="d-flex"> <span class="fas fa-cogs px-3 py-1"></span>
+                                    <div class="d-flex flex-column">
+                                        <p class="fw-bold">integrations</p>
+                                        <p class="text-muted">Connect the platforms you use into one place</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 p-0">
+                    <img src="https://unsplash.it/1500?random" class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- this is counter section-->
+    <section class="ftco-counter img" id="section-counter">
+        <div class="container">
+            <div class="row no-gutters d-flex">
+                <div class="col-lg-5 col-md-6 d-flex">
+                    <img src="https://unsplash.it/1500?random" class="img-fluid" alt="">
+                    <!-- <div class="img d-flex align-self-stretch" style="background-image:url(https://unsplash.it/1500?random);"></div> -->
+                </div>
+                <div class=" col-lg-7 col-md-6  p-3 pl-md-5 py-5 border">
+                    <div class="row justify-content-start pb-3">
+                        <div class="col-md-12 heading-section heading-section-white ftco-animate">
+                            <h2 class="mb-4">Consult us here in <span>ITSolution</span></h2>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia
+                            </p>
+                        </div>
+                    </div>
+                    <!-- <div class="row">
+                    <div class="col-md-6 justify-content-center counter-wrap ftco-animate">
+                        <div class="block-18 mb-4">
+                            <div class="text">
+                                <strong class="number" data-number="750">0</strong>
+                                <span>Project Complete</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 justify-content-center counter-wrap ftco-animate">
+                        <div class="block-18 mb-4">
+                            <div class="text">
+                                <strong class="number" data-number="568">0</strong>
+                                <span>Happy Clients</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 justify-content-center counter-wrap ftco-animate">
+                        <div class="block-18 mb-4">
+                            <div class="text">
+                                <strong class="number" data-number="478">0</strong>
+                                <span>Business Partners</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 justify-content-center counter-wrap ftco-animate">
+                        <div class="block-18 mb-4">
+                            <div class="text">
+                                <strong class="number" data-number="780">0</strong>
+                                <span>IT Consultant</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 pb-5">
+                        <div class="d-flex"> <span class="fas fa-tasks px-3 py-1"></span>
+                            <div class="d-flex flex-column">
+                                <p class="fw-bold">Tasks</p>
+                                <p class="text-muted">Customize the way you manage work</p>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                    <div class="card1 pb-0">
+                        <div class="row pt-3">
+                            <div class="col-lg-6 col-md-6 pb-5">
+                                <div class="d-flex"> <span class="fas fa-tasks px-3 py-1"></span>
+                                    <div class="d-flex flex-column">
+                                        <p class="fw-bold">Tasks</p>
+                                        <p class="text-muted">Customize the way you manage work</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 pb-5">
+                                <div class="d-flex"> <span class="far fa-file-alt px-3 py-1"></span>
+                                    <div class="d-flex flex-column">
+                                        <p class="fw-bold">Docs</p>
+                                        <p class="text-muted">Build docus, wiki's & knowledge bases.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 pb-5">
+                                <div class="d-flex"> <span class="fas fa-trophy px-3 py-1"></span>
+                                    <div class="d-flex flex-column">
+                                        <p class="fw-bold">Goals</p>
+                                        <p class="text-muted">Monitor and manage your strategy</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 pb-5">
+                                <div class="d-flex"> <span class="fas fa-cogs px-3 py-1"></span>
+                                    <div class="d-flex flex-column">
+                                        <p class="fw-bold">integrations</p>
+                                        <p class="text-muted">Connect the platforms you use into one place</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Team section -->
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-lg-6 mb-5">
+                <h2 class="section-title">Our Mentors</h2>
+                <p>Our Mentors from 37+ countries help us deliver the unique two week programs designed by experts at
+                    Precisely. We ensure you have constant engagement with our mentors and take advantage of their
+                    expertise
+                    and experience.
+                </p>
+            </div>
+        </div>
+    </div>
+    <section class="col-lg-11 mx-lg-auto mt-1">
+        <div class="">
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <div class="box">
+                        <img src="https://unsplash.it/1500?random">
+                        <div class="box-content">
+                            <p class="text-white">(Gates Cambridge Scholar)</p>
+                        </div>
+                        <ul class="icon">
+                            <div class="box-content">
+                                <h3 class="title">Noa Epstein</h3>
+                                <h3 class="title">Tennenhaus </h3>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="box">
+                        <img src="https://unsplash.it/1500?random">
+                        <div class="box-content">
+                            <p class="text-white">AFLSP Scholar- The Hong Kong University of Science and Technology</p>
+                        </div>
+                        <ul class="icon">
+                            <div class="box-content">
+                                <h3 class="title">Desh Deepak</h3>
+                                <h3 class="title"> Dwivedi</h3>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="box">
+                        <img src="https://unsplash.it/1500?random">
+                        <div class="box-content">
+                            <p class="text-white"> CEO - Global Citizen Capital + Better Together Foundation</p>
+                        </div>
+                        <ul class="icon">
+                            <div class="box-content">
+                                <h3 class="title">Kenneth</h3>
+                                <h3 class="title">Kwok</h3>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section>
+        <div class="container-fluid px-2 px-md-4 py-5 mx-auto">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-10 col-lg-9 col-xl-8">
+                    <div class="card card-main border-0 text-center">
+                        <h5 class="font-weight-bold mb-4">What our clients are saying<br>about us.</h5>
+                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carouselExampleIndicators" data-slide-to="0"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="1" class="active"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="carousel-item">
+                                    <div class="card border-0 card-0">
+                                        <div class="card profile py-3 px-4">
+                                            <div class="text-center"> <img src="https://i.imgur.com/gazoShk.jpg"
+                                                    class="img-fluid profile-pic"> </div>
+                                            <h6 class="mb-0 mt-2">Marielle Haag</h6> <small>Backend Developer</small>
+                                        </div> <img class="img-fluid open-quotes" src="https://i.imgur.com/Hp91vdT.png"
+                                            width="20" height="20">
+                                        <p class="content mb-0">Excepteur sint occaecat cupidatat non proident, sunt in
+                                            culpa qui officia deserunt mollit anim id est laborum.</p> <img
+                                            class="img-fluid close-quotes ml-auto" src="https://i.imgur.com/iPcHyJK.png"
+                                            width="20" height="20">
+                                    </div>
+                                </div>
+                                <div class="carousel-item active">
+                                    <div class="card border-0 card-0">
+                                        <div class="card profile py-3 px-4">
+                                            <div class="text-center"> <img src="https://i.imgur.com/oW8Wpwi.jpg"
+                                                    class="img-fluid profile-pic"> </div>
+                                            <h6 class="mb-0 mt-2">Ximena Vegara</h6> <small>UI/UX Designer</small>
+                                        </div> <img class="img-fluid open-quotes" src="https://i.imgur.com/Hp91vdT.png"
+                                            width="20" height="20">
+                                        <p class="content mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing
+                                            elit, sed do eiusmod incididunt ut labore et dolore magna aliqua.</p> <img
+                                            class="img-fluid close-quotes ml-auto" src="https://i.imgur.com/iPcHyJK.png"
+                                            width="20" height="20">
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="card border-0 card-0">
+                                        <div class="card profile py-3 px-4">
+                                            <div class="text-center"> <img src="https://i.imgur.com/ndQx2Rg.jpg"
+                                                    class="img-fluid profile-pic"> </div>
+                                            <h6 class="mb-0 mt-2">John Paul</h6> <small>UI/UX Designer</small>
+                                        </div> <img class="img-fluid open-quotes" src="https://i.imgur.com/Hp91vdT.png"
+                                            width="20" height="20">
+                                        <p class="content mb-0">Duis aute irure dolor in reprehenderit in voluptate
+                                            velit esse cillum dolore eu fugiat nulla pariatur.</p> <img
+                                            class="img-fluid close-quotes ml-auto" src="https://i.imgur.com/iPcHyJK.png"
+                                            width="20" height="20">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="px-4 py-5 my-5 text-center">
+
+        <h1 class="display-4 fw-bold">Welcome to Precisely</h1>
+        <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">Find, apply to and secure top international admissions, scholarships, internships and
+                jobs </p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                <button type="button" class="btn btn-outline btn-mb  m-3">Explore Destinations </button>
+                <button type="button" class="btn btn-outline btn-mb  m-3">Know More</button>
+                <button type="button" class="btn btn-outline btn-lg  m-3"> Schedule a free consultation</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>

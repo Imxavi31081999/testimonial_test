@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#testimonial-slider").owlCarousel({
+                items: 1,
+                itemsDesktop: [1000, 1],
+                itemsDesktopSmall: [979, 1],
+                itemsTablet: [768, 1],
+                margin: 10,
+                pagination: false,
+                navigation: true,
+                navigationText: ["", ""],
+                autoPlay: true
+            });
+        });
+    </script>
+    <style>
+        .demo {
+            background: #6c6a6a;
+        }
+
+        .testimonial .pic {
+            width: 22%;
+            padding: 20px 0;
+            margin: 0 6% 0 2%;
+            float: left;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial .pic:before,
+        .testimonial .pic:after {
+            content: "";
+            width: 130px;
+            height: 150px;
+            background: #4a75b5;
+            position: absolute;
+            z-index: -1;
+        }
+
+        .testimonial .pic:before {
+            top: 0;
+            right: -20px;
+        }
+
+        .testimonial .pic:after {
+            bottom: 0;
+            left: -20px;
+        }
+
+        .testimonial .pic img {
+            width: 100%;
+            height: auto;
+            border: 3px solid #e1c37d;
+        }
+
+        .testimonial .testimonial-content {
+            width: 70%;
+            float: right;
+        }
+
+        .testimonial .title {
+            display: block;
+            font-size: 18px;
+            font-weight: 600;
+            color: #fff;
+            margin: 0;
+            text-transform: uppercase;
+            padding-top: 65px;
+            padding-left: 15px;
+        }
+
+        .testimonial .post {
+            display: block;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 27px;
+            color: #fff;
+            text-transform: capitalize;
+            margin-bottom: 25px;
+            padding-left: 15px;
+        }
+
+        .testimonial .description {
+            font-size: 20px;
+            color: #fff;
+            padding: 0 15px;
+            margin: 0;
+            position: relative;
+        }
+
+        .testimonial .description:before,
+        .testimonial .description:after {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            font-size: 17px;
+            color: #e1c37d;
+            position: relative;
+        }
+
+        .testimonial .description:before {
+            content: "\f10d";
+            margin-right: 5px;
+            top: 0;
+            left: 0;
+        }
+
+        .testimonial .description:after {
+            content: "\f10e";
+            margin-left: 5px;
+            position: relative;
+            bottom: 0;
+            right: 0;
+        }
+
+        .owl-theme .owl-controls {
+            width: 70%;
+            margin: 10;
+            text-align: left;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+        .owl-theme .owl-controls .owl-buttons div {
+            width: 70px;
+            height: 90px;
+            line-height: 90px;
+            background: transparent;
+            border-radius: 0;
+            opacity: 1;
+            position: relative;
+        }
+
+        .owl-prev:before,
+        .owl-next:before {
+            content: "\f0a8";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            font-size: 45px;
+            font-weight: 900;
+            color: #ddd;
+            font-size: 37px;
+            position: absolute;
+            top: 0;
+            left: 25%;
+        }
+
+        .owl-next:before {
+            content: "\f0a9";
+        }
+
+        .owl-next:after {
+            content: " / ";
+            font-size: 40px;
+            color: #ddd;
+            position: absolute;
+            top: 0;
+            left: -10px;
+        }
+
+        @media only screen and (max-width: 990px) {
+            .testimonial {
+                text-align: center;
+            }
+
+            .testimonial .pic {
+                width: 200px;
+                margin: 0 auto;
+                float: none;
+            }
+
+            .testimonial .pic:before,
+            .testimonial .pic:after {
+                width: 80px;
+                height: 100px;
+            }
+
+            .testimonial .testimonial-content {
+                width: 100%;
+                float: none;
+            }
+
+            .testimonial .title {
+                padding: 15px 0 0 0;
+            }
+
+            .testimonial .post {
+                padding: 0;
+                margin-bottom: 10px;
+            }
+
+            .owl-theme .owl-controls {
+                width: 100%;
+                position: static;
+                text-align: center;
+            }
+
+            .owl-theme .owl-controls .owl-buttons div {
+                height: 50px;
+                line-height: 50px;
+            }
+        }
+    </style>
+    <title>Title</title>
+
+</head>
+
+<body>
+    <div class="demo pb-5">
+        <h1>here what our students hva yp sayu</h1>
+        <div class="container mt-4">
+            <div class="row mt-4">
+                <div class="col-md-12 mt-4">
+                    <div id="testimonial-slider" class="owl-carousel mt-5">
+                        <div class="testimonial mt-4">
+                            <div class="pic">
+                                <img src="https://unsplash.it/1500?random" alt="">
+                            </div>
+                            <div class="testimonial-content">
+                                <h3 class="title">&mdash; Savya Sachi Pandey </h3>
+                                <span class="post">| (Research Intern- University of Trieste, Italy)</span>
+                                <p class="description">
+                                    I am really glad that I choose Precisely over all others. Their internship programs and partner organisations are a class apart. An undergraduate student like me wouldn’t get an exposure as such if it wasn’t for Precisely. Thanks!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="testimonial mt-4">
+                            <div class="pic">
+                                <img src="https://unsplash.it/1500?random" alt="">
+                            </div>
+                            <div class="testimonial-content">
+                                <h3 class="title">&mdash; Shivendra Singh</h3>
+                                <span class="post">| (HKSTP, Hong Kong)</span>
+                                <p class="description">
+                                    I went through the discovery program for internships and was amazed as to how the Precisely team guided me through. They identified my interests and did a detailed profile analysis before connecting me with HKSTP. Always grateful.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="testimonial mt-4">
+                            <div class="pic">
+                                <img src="https://unsplash.it/1500?random" alt="">
+                            </div>
+                            <div class="testimonial-content">
+                                <h3 class="title">&mdash; Jarar Nazar</h3>
+                                <span class="post"> | Peking University, China</span>
+                                <p class="description">
+                                    They got me admission to not just one but multiple colleges. This way I had the
+                                    choice to choose the best! Thanks a lot, team.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="testimonial mt-4">
+                            <div class="pic">
+                                <img src="https://unsplash.it/1500?random" alt="">
+                            </div>
+                            <div class="testimonial-content">
+                                <h3 class="title">&mdash; Katie Weintraub</h3>
+                                <span class="post">| Harvard University, US</span>
+                                <p class="description">
+                                    Ivy Leagues are always a dream but team Precisely motivates you to put up your
+                                    best! Appreciate the help at every step.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="testimonial mt-4">
+                            <div class="pic">
+                                <img src="https://unsplash.it/1500?random" alt="">
+                            </div>
+                            <div class="testimonial-content">
+                                <h3 class="title">&mdash; Hanz Ponce</h3>
+                                <span class="post">| (Government of Peru)</span>
+                                <p class="description">
+                                    In my region internships are hard to secure. In spite of me approaching Precisely online, they helped me crack an internship in my own country. The care and help they provide is above international standards and most importantly, their network of organisations is simply the best.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="testimonial mt-4">
+                            <div class="pic">
+                                <img src="https://unsplash.it/1500?random" alt="">
+                            </div>
+                            <div class="testimonial-content">
+                                <h3 class="title">&mdash; Kushagra</h3>
+                                <span class="post"> | University of Southern California, US</span>
+                                <p class="description">
+                                    Moving to the US is a tricky yet rewarding experience. The end to end help from
+                                    Precisely makes the process feel much simpler and the goals more achievable!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
